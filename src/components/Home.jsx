@@ -58,7 +58,7 @@ const Home = () => {
                         >
                             <h3 className="text-xl font-bold">{card.place}</h3>
                             <p>
-                                <strong>Affect Areas:</strong> {card.affectAreas}
+                                <strong>Affected Areas:</strong> {card.affectAreas}
                             </p>
                                                     <p>
                                 <strong>Date:</strong> {card.date}
