@@ -20,6 +20,14 @@ const Home = () => {
             time: '12 PM - 7 PM',
             alternativeRoute: 'Mohakhali Flyover, Hatirjheel',
         },
+            {
+            id: 3,
+            place: 'Agargaon',
+            affectAreas: 'Shamoli, shewrapara',
+            date: "25/11/2024",
+            time: '11:20 AM',
+            alternativeRoute: 'Bijoy Sharani, Kazipara',
+        },
        
     ];
 
@@ -43,14 +51,17 @@ const Home = () => {
                 />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {filteredCards.map((card) => (
+                    {filteredCards.reverse().map((card) => (
                         <div
                             key={card.id}
-                            className="border p-4 rounded-lg text-gray-800 bg-red-500 shadow-md hover:scale-105 hover:shadow-lg hover:bg-red-600 transition-all duration-300"
+                            className="flex flex-col gap-2 border p-4 rounded-lg text-gray-800 bg-red-500 shadow-md hover:scale-105 hover:shadow-lg hover:bg-red-600 transition-all duration-300"
                         >
                             <h3 className="text-xl font-bold">{card.place}</h3>
                             <p>
                                 <strong>Affect Areas:</strong> {card.affectAreas}
+                            </p>
+                                                    <p>
+                                <strong>Date:</strong> {card.date}
                             </p>
                             <p>
                                 <strong>Time:</strong> {card.time}
@@ -64,7 +75,7 @@ const Home = () => {
             </div>
 
 <div className="my-8 p-8 rounded-md">
-    <h2 className="text-center text-xl font-bold mb-4">Map of Dhaka City (with Traffic)</h2>
+    <h2 className="text-center text-xl font-bold mb-4">Map</h2>
     <div className="w-full h-[500px] rounded-xl">
         <iframe
             title="Dhaka City Traffic"
