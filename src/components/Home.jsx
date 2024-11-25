@@ -23,7 +23,7 @@ const Home = () => {
             {
             id: 3,
             place: 'Agargaon',
-            affectAreas: 'Shamoli, shewrapara',
+            affectAreas: 'Agargaon, Shamoli, shewrapara',
             date: "25/11/2024",
             time: '11:20 AM',
             alternativeRoute: 'Bijoy Sharani, Kazipara',
@@ -32,7 +32,7 @@ const Home = () => {
     ];
 
     const filteredCards = cards.filter((card) =>
-        card.place.toLowerCase().includes(searchTerm.toLowerCase())
+        card.affectAreas.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     return (
